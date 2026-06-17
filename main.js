@@ -2,6 +2,9 @@ const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
+const pokemonImage = document.querySelector(".pokemon-image");
+
+    
 
 async function checkPokemon(pokemon) {
 
@@ -20,6 +23,9 @@ async function checkPokemon(pokemon) {
 
     document.querySelector(".pokemon-id").innerHTML =
         data.id;
+    
+    pokemonImage.src =
+        data.sprites.front_default;
 
 
     document.querySelector(".pokemon").style.display =
